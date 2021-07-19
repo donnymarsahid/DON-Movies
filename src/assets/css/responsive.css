@@ -1,3 +1,7 @@
+:root {
+  --black: #3e3d3d;
+  --red: #e34d34;
+}
 /* Mobile Small */
 @media (max-width: 320px) {
   p {
@@ -11,6 +15,40 @@
   }
 }
 @media (max-width: 576px) {
+  footer .link-portfolio {
+    display: none;
+  }
+  footer {
+    height: 200px;
+    width: 100%;
+  }
+  footer .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly !important;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  footer .container .about {
+    text-align: center !important;
+    order: 2;
+  }
+  footer .container .about p {
+    margin: 0 0 3px;
+  }
+  footer .container .link-portfolio p {
+    margin: 0 0 3px;
+  }
+  footer .container .copyright {
+    order: 3;
+  }
+  footer .container .link-portfolio {
+    order: 2;
+  }
+  footer .link-portfolio p.text-end {
+    text-align: center !important;
+  }
   p {
     font-size: 14px !important;
   }
@@ -20,9 +58,83 @@
   .section-top-rated .col-md-2 {
     width: 33%;
   }
+  nav .search,
+  nav .link {
+    display: none !important;
+  }
+
+  nav .logo img {
+    width: 150px;
+  }
+  nav .hamburger-menu i {
+    font-size: 28px;
+    color: white;
+  }
+  .search-mobile input {
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+  }
+  .icon-search {
+    cursor: pointer;
+    background-color: #e4e4e4;
+    padding: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .hamburger-menu button {
+    background-color: transparent;
+    border: none;
+  }
+  .offcanvas {
+    background-color: var(--red);
+  }
+  .offcanvas a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 20px;
+  }
 }
 /* Mobile To Tablet */
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 767px) {
+  footer .link-portfolio {
+    display: none;
+  }
+  footer {
+    height: 200px;
+    width: 100%;
+  }
+  footer .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly !important;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  footer .container .about {
+    text-align: center !important;
+    order: 2;
+  }
+  footer .container .about p {
+    margin: 0 0 3px;
+  }
+  footer .container .link-portfolio p {
+    margin: 0 0 3px;
+  }
+  footer .container .copyright {
+    order: 3;
+  }
+  footer .container .link-portfolio {
+    order: 2;
+  }
+  footer .link-portfolio p.text-end {
+    text-align: center !important;
+  }
   p {
     font-size: 16px !important;
   }
@@ -32,16 +144,85 @@
   .section-top-rated .col-md-2 {
     width: 25%;
   }
+  nav .logo img {
+    width: 150px;
+  }
+  nav .hamburger-menu i {
+    font-size: 28px;
+    color: white;
+  }
+  .search-mobile input {
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+  }
+  .icon-search {
+    cursor: pointer;
+    background-color: #e4e4e4;
+    padding: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .hamburger-menu button {
+    background-color: transparent;
+    border: none;
+  }
+  .offcanvas {
+    background-color: var(--red);
+  }
+  .offcanvas a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  nav .search {
+    display: none !important;
+  }
+  nav .link {
+    display: none !important;
+  }
 }
 /* Tablet to Desktop  */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   p {
     font-size: 16px !important;
+  }
+  .search-mobile {
+    display: none !important;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  nav .search input {
+    width: 100px;
+    font-size: 12px;
+  }
+  nav .logo img {
+    width: 140px;
+  }
+  nav .link ul li a {
+    font-size: 13px;
+  }
+  footer .social-media-footer {
+    display: none;
   }
 }
 /* Desktop */
 @media (min-width: 992px) {
   p {
     font-size: 16px !important;
+  }
+  .search-mobile {
+    display: none !important;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  footer .social-media-footer {
+    display: none;
   }
 }

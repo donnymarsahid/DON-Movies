@@ -3,7 +3,7 @@ import '../assets/css/style.css';
 import '../assets/css/responsive.css';
 import star from '../assets/img/star.svg';
 
-const Popular = ({ movie }) => {
+const CardPopular = ({ movie }) => {
   return (
     <>
       <div class="col-md-2 mb-3">
@@ -25,4 +25,4 @@ const Popular = ({ movie }) => {
   );
 };
 
-export default Popular;
+export default CardPopular;

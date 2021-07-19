@@ -3,12 +3,12 @@ import '../assets/css/style.css';
 import '../assets/css/responsive.css';
 import star from '../assets/img/star.svg';
 
-const TopRated = ({ movie }) => {
+const CardPopular = ({ movie }) => {
   return (
     <>
       <div class="col-md-2 mb-3">
-        <div class="box-top-rated">
-          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.poster_path} className="img-fluid img-top-rated" />
+        <div class="box-popular">
+          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.poster_path} className="img-fluid img-popular" />
           <div class="overlay-title text-center">
             <p>{movie.title}</p>
           </div>
@@ -25,4 +25,4 @@ const TopRated = ({ movie }) => {
   );
 };
 
-export default TopRated;
+export default CardPopular;

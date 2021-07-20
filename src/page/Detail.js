@@ -24,7 +24,7 @@ export default class Detail extends Component {
     axios.get(`${BASE_URL_LINK}movie/${idDetails}?${API_KEY}`).then((res) => {
       const genre = res.data.genres.map((genre) => {
         return (
-          <div class="genre-1 p-2 me-3 " style={{ backgroundColor: 'rgb(155, 155, 155)', borderRadius: '5px' }}>
+          <div class="genre-1 p-2 me-3 col-3" style={{ backgroundColor: 'rgb(155, 155, 155)', borderRadius: '5px' }}>
             {genre.name}
           </div>
         );
@@ -57,7 +57,7 @@ export default class Detail extends Component {
               <p>Popularity : {this.state.details.popularity}</p>
               <div className="border-bottom border-light"></div>
               <p class="mt-3">Genre :</p>
-              <div class="genre d-flex">{this.state.genre}</div>
+              <div class="genre d-flex row">{this.state.genre}</div>
               <p className="mt-3">Tag line : {this.state.details.tagline} </p>
               <p className="mt-3">Languange : {this.state.details.original_language} </p>
               <p className="mt-3">Realease : {this.state.details.release_date} </p>

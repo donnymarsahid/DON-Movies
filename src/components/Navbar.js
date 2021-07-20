@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logoDSCMovies from '../assets/img/logo-dscmovies.svg';
+import logoDonMovies from '../assets/img/logo-donmovies.svg';
 import axios from 'axios';
 
 const SEARCH_TERM = `https://api.themoviedb.org/3/search/movie?api_key=1232aba0581e79269e7da9fb05d9521e&query=`;
@@ -31,7 +31,7 @@ export default class Navbar extends Component {
           <div class="container d-flex justify-content-between  align-items-center ">
             <div class="logo">
               <a href="/">
-                <img src={logoDSCMovies} alt="logo-dsc-movies" width="200" />
+                <img src={logoDonMovies} alt="logo-dsc-movies" width="200" />
               </a>
             </div>
             <div class="link d-flex  align-items-center">
@@ -73,7 +73,7 @@ export default class Navbar extends Component {
           </div>
           <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
             <div class="offcanvas-header">
-              <img src={logoDSCMovies} alt="logo-dscmovies" />
+              <img src={logoDonMovies} alt="logo-dscmovies" />
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">

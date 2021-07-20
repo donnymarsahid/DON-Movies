@@ -7,6 +7,7 @@ const SEARCH_TERM = `https://api.themoviedb.org/3/search/movie?api_key=1232aba05
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       movie: [],
       value: '',

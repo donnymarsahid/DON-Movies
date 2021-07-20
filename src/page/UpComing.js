@@ -19,13 +19,7 @@ const UpComing = (props) => {
   return (
     <>
       <div class="container mt-5">
-        <div class="search-mobile d-flex justify-content-end">
-          <input type="text" autoComplete="off" placeholder="search movies.." />
-          <div class="icon-search">
-            <i class="fas fa-search"></i>
-          </div>
-        </div>
-        <div class="section-popular ">
+        <div class="section-movie">
           <h3 className="results"> </h3>
           <div class="row">{dataUpComing}</div>
         </div>

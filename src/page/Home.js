@@ -14,14 +14,10 @@ const Home = (props) => {
   return (
     <>
       <div class="container mt-5">
-        <div class="results"> </div>
-        <div class="search-mobile d-flex justify-content-end">
-          <input type="text" autoComplete="off" placeholder="search movies.." />
-          <div class="icon-search">
-            <i class="fas fa-search"></i>
-          </div>
+        <div class="section-movie">
+          <div class="results"> </div>
+          <div class="row">{renderCardMovie}</div>
         </div>
-        <div class="row">{renderCardMovie}</div>
       </div>
     </>
   );

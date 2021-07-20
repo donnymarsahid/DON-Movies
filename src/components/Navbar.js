@@ -77,13 +77,33 @@ export default class Navbar extends Component {
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              <a href="/">Popular</a>
+              <a href="/popular">Popular</a>
               <br />
               <br />
-              <a href="/">Top Rated</a>
+              <a href="/toprated">Top Rated</a>
               <br />
               <br />
-              <a href="/">Up Coming</a>
+              <a href="/upcoming">Up Coming</a>
+              <br />
+              <br />
+              <div class="search-mobile d-flex justify-content-end">
+                <form onSubmit={this.update}>
+                  <input
+                    type="text"
+                    autoComplete="off"
+                    placeholder="search movies.."
+                    name="search"
+                    onChange={(e) => {
+                      this.setState({
+                        value: e.target.value,
+                      });
+                    }}
+                  />
+                </form>
+                <div class="icon-search">
+                  <i class="fas fa-search" onClick={this.update}></i>
+                </div>
+              </div>
             </div>
           </div>
         </nav>

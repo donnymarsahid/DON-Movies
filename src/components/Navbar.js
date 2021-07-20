@@ -17,7 +17,8 @@ export default class Navbar extends Component {
   update = async (e) => {
     e.preventDefault();
     axios.get(`${SEARCH_TERM}${this.state.value}`).then((res) => {
-      this.props.updateMovie(res.data.results);
+      this.props.updateMovie(res.data.results, `search results : ${this.state.value}`);
+      this.props.updateMoviePopular(res.data.results, `search results : ${this.state.value}`);
     });
   };
 
@@ -38,7 +39,7 @@ export default class Navbar extends Component {
                   <Link to="/upcoming">Up Coming</Link>
                 </li>
                 <li>
-                  <Link to="/popular">Popular</Link>
+                  <a href="/popular">Popular</a>
                 </li>
                 <li>
                   <Link to="/toprated">Top Rated</Link>

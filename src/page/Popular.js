@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../assets/css/style.css';
 import '../assets/css/responsive.css';
 import CardPopular from '../cards/CardPopular';
-import axios from 'axios';
+import $ from 'jquery';
 
-const Popular = () => {
-  const [moviePopular, setMoviePopular] = useState([]);
-
-  const API_KEY = 'api_key=1232aba0581e79269e7da9fb05d9521e';
-  const BASE_URL = 'https://api.themoviedb.org/3/';
-
-  useEffect(() => {
-    axios.get(`${BASE_URL}movie/popular?${API_KEY}`).then((res) => {
-      setMoviePopular(res.data.results);
-    });
-  }, []);
-  const dataPopular = moviePopular.map((movie) => {
+const Popular = (props) => {
+  if (props.moviePopular.length < 1) {
+    $('.results').html('movie not found');
+  }
+  const dataPopular = props.moviePopular.map((movie) => {
+    if (props.value < 1) {
+      $('.results').html('Popular');
+    } else {
+      $('.results').html(props.value);
+    }
     return <CardPopular movie={movie} key={movie.id} />;
   });
   return (
@@ -28,7 +26,8 @@ const Popular = () => {
           </div>
         </div>
         <div class="section-popular ">
-          <h3>Popular</h3>
+          {/* <div class="results"> </div> */}
+          <h3 className="results"> </h3>
           <div class="row">{dataPopular}</div>
         </div>
       </div>

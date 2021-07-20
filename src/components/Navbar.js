@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logoDSCMovies from '../assets/img/logo-dscmovies.svg';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const SEARCH_TERM = `https://api.themoviedb.org/3/search/movie?api_key=1232aba0581e79269e7da9fb05d9521e&query=`;
@@ -19,6 +18,8 @@ export default class Navbar extends Component {
     axios.get(`${SEARCH_TERM}${this.state.value}`).then((res) => {
       this.props.updateMovie(res.data.results, `search results : ${this.state.value}`);
       this.props.updateMoviePopular(res.data.results, `search results : ${this.state.value}`);
+      this.props.updateMovieTopRated(res.data.results, `search results : ${this.state.value}`);
+      this.props.updateMovieUpComing(res.data.results, `search results : ${this.state.value}`);
     });
   };
 
@@ -36,13 +37,13 @@ export default class Navbar extends Component {
             <div class="link d-flex  align-items-center">
               <ul class="d-flex justify-content-between align-items-center text-uppercase">
                 <li>
-                  <Link to="/upcoming">Up Coming</Link>
+                  <a href="/upcoming">Up Coming</a>
                 </li>
                 <li>
                   <a href="/popular">Popular</a>
                 </li>
                 <li>
-                  <Link to="/toprated">Top Rated</Link>
+                  <a href="/toprated">Top Rated</a>
                 </li>
               </ul>
             </div>

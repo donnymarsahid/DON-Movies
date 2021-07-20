@@ -26,7 +26,6 @@ const Popular = (props) => {
           </div>
         </div>
         <div class="section-popular ">
-          {/* <div class="results"> </div> */}
           <h3 className="results"> </h3>
           <div class="row">{dataPopular}</div>
         </div>

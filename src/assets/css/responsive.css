@@ -17,6 +17,12 @@
   }
 }
 @media (max-width: 576px) {
+  .offcanvas {
+    width: 80%;
+  }
+  .offcanvas img {
+    width: 145px;
+  }
   .genre-1 {
     font-size: 14px;
     padding: 3.5px !important;
@@ -237,6 +243,9 @@
 }
 /* Tablet to Desktop  */
 @media (min-width: 768px) and (max-width: 991px) {
+  .offcanvas {
+    display: none;
+  }
   .genre-1 {
     font-size: 14px;
     font-size: 14px;

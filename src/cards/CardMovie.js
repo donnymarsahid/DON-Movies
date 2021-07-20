@@ -19,7 +19,7 @@ const CardPopular = ({ movie }) => {
           </div>
           <div class="detail  d-flex align-items-center justify-content-center">
             <Link to={`/detail/${movie.id}`}>
-              <button class="btn-detail">Detail</button>
+              <button class="btn-detail">Trailler</button>
             </Link>
           </div>
         </div>

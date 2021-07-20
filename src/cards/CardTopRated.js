@@ -2,6 +2,7 @@ import React from 'react';
 import '../assets/css/style.css';
 import '../assets/css/responsive.css';
 import star from '../assets/img/star.svg';
+import { Link } from 'react-router-dom';
 
 const CardTopRated = ({ movie }) => {
   return (
@@ -17,7 +18,9 @@ const CardTopRated = ({ movie }) => {
             <p>{movie.vote_average}</p>
           </div>
           <div class="detail  d-flex align-items-center justify-content-center">
-            <button class="btn-detail">Detail</button>
+            <Link to={`/detail/${movie.id}`}>
+              <button class="btn-detail">Detail</button>
+            </Link>
           </div>
         </div>
       </div>

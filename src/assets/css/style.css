@@ -243,3 +243,10 @@ footer .social-media-footer i:hover {
   display: none;
 }
 /* Footer End */
+
+/* YouTube Start */
+.embed-responsive-item {
+  width: 100% !important;
+  height: 550px !important;
+}
+/* YouTube End */

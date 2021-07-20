@@ -6,6 +6,7 @@ import Popular from './page/Popular';
 import React, { useState, useEffect } from 'react';
 import TopRated from './page/TopRated';
 import UpComing from './page/UpComing';
+import Detail from './page/Detail';
 import axios from 'axios';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   const [movieTopRated, setMovieTopRated] = useState([]);
   const [movieUpComing, setMovieUpComing] = useState([]);
   const [value, setValue] = useState('');
+
   const BASE_URL = 'https://api.themoviedb.org/3/discover/movie?';
   const API_KEY = 'api_key=1232aba0581e79269e7da9fb05d9521e';
   const BASE_URL_LINK = 'https://api.themoviedb.org/3/';
@@ -68,6 +70,7 @@ function App() {
           <Route path="/popular" render={(props) => <Popular {...props} moviePopular={moviePopular} value={value} />} />
           <Route path="/toprated" render={(props) => <TopRated {...props} movieTopRated={movieTopRated} value={value} />} />
           <Route path="/upcoming" render={(props) => <UpComing {...props} movieUpComing={movieUpComing} value={value} />} />
+          <Route path="/detail/:idDetail" component={Detail} />
         </Switch>
         <Footer />
       </Router>

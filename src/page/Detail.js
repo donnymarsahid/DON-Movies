@@ -48,7 +48,7 @@ export default class Detail extends Component {
         <div class="container mt-3">
           <div class="embed-responsive embed-responsive-16by9 ">
             <iframe class="embed-responsive-item img-fluid" title=" " src={`https://www.youtube.com/embed/${this.state.video.key}?rel=0`} allowfullscreen></iframe>
-            <div class="box-title bg-danger text-light p-3 border-bottom border-light">
+            <div class="box-title text-light p-3 border-bottom border-light" style={{ backgroundColor: '#E34D34' }}>
               <h1>{this.state.details.title}</h1>
               <div class=" d-flex pt-1">
                 <img src={star} alt="star" width="25px" height="25px" class="me-1" />

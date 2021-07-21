@@ -8,6 +8,7 @@ import TopRated from './page/TopRated';
 import UpComing from './page/UpComing';
 import Detail from './page/Detail';
 import axios from 'axios';
+import NoMatch from './404/NoMatch';
 
 function App() {
   const [movie, setMovie] = useState([]);
@@ -71,6 +72,8 @@ function App() {
           <Route path="/toprated" render={(props) => <TopRated {...props} movieTopRated={movieTopRated} value={value} />} />
           <Route path="/upcoming" render={(props) => <UpComing {...props} movieUpComing={movieUpComing} value={value} />} />
           <Route path="/detail/:idDetail" component={Detail} />
+          {/* 404 Page Not Found */}
+          <Route path="/*" component={NoMatch} />
         </Switch>
         <Footer />
       </Router>

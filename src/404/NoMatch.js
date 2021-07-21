@@ -5,7 +5,7 @@ const NoMatch = () => {
   return (
     <>
       <div class="nomatch">
-        <h1>404 | Halaman tidak ada</h1>
+        <h1>404 | Page Not Found </h1>
       </div>
     </>
   );
